@@ -1,15 +1,24 @@
 .navbar-lewagon {
   display: flex;
-  justify-content: space-between;
   background: white;
 }
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
+  display: flex;
 }
 
 .navbar-lewagon .navbar-brand img {
   width: 50px;
+}
+
+.navbar-lewagon .nav-truc {
+  display: flex;
+}
+
+.navbar-lewagon .nav-machin {
+  display: flex;
+  justify-content: flex-end;
 }
 
 :root {
@@ -31,7 +40,7 @@
   // Main styles
   form {
     position: relative;
-    width: 30rem;
+    width: 20rem;
     background: var(--color-brand);
     border-radius: var(--rad);
   }

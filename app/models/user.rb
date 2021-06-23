@@ -6,4 +6,5 @@ class User < ApplicationRecord
 
   has_many :whishlist_events, dependent: :destroy
   has_many :events, through: :whishlist_events
+  has_many :donations, dependent: :destroy
 end
