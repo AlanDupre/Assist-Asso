@@ -1,10 +1,13 @@
-#myProgress {
+#eventProgress {
   width: 100%;
-  background-color: grey;
+  background-color: white;
+  border-color: #289672;
+  border-radius: 50%;
 }
 
-#myBar {
+#eventBar {
   width: 1%;
   height: 30px;
-  background-color: green;
+  background-color: #289672;
+  border-radius: 50%;
 }
