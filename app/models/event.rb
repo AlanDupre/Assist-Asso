@@ -1,4 +1,4 @@
 class Event < ApplicationRecord
   has_many :needs
-  belongs_to :user
+  has_many :donations, through: :needs
 end

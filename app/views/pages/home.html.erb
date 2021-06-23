@@ -2,11 +2,12 @@
   <div class="container">
     <h1>Assist' Asso </h1>
     <p>Find an Event !</p>
-    <a class="btn btn-success" href="#">Discover</a>
+    <%= link_to events_path do  %>
+    <p class="btn btn-success" >Discover</p>
+    <% end %>
   </div>
 </div>
 
-<%= render "shared/cards" %>"
 
 <div class="container card-home">
   <div class="card-category" style="background: green">
