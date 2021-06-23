@@ -10,12 +10,15 @@
   <div class="navbar">
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
+        <div class="nav-truc">
           <li class="nav-item">
             <%= link_to "Explorer", "#", class: "nav-link" %>
           </li>
           <li class="nav-item">
             <%= link_to "Créer", "#", class: "nav-link" %>
           </li>
+        </div>
+        <div>
           <li class="nav-search">
             <form onsubmit="event.preventDefault();" role="search">
             <label for="search">Search for stuff</label>
@@ -23,6 +26,8 @@
             <button type="submit">Go</button>    
             </form>
           </li>
+        </div>
+        <div class="nav-machin">
         <% if user_signed_in? %>
           <li class="nav-item active">
             <%= link_to "Dashboard", "#", class: "nav-link" %>
@@ -41,6 +46,7 @@
             <%= link_to "Login", new_user_session_path, class: "nav-link" %>
           </li>
         <% end %>
+        </div>
       </ul>
     </div>
   </div>
