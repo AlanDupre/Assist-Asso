@@ -18,7 +18,7 @@
             <%= link_to "Créer", new_event_path, class: "nav-link" %>
           </li>
         </div>
-        <div>
+        <%# <div>
           <li class="nav-search">
             <form onsubmit="event.preventDefault();" role="search">
             <label for="search">Search for stuff</label>
@@ -26,7 +26,7 @@
             <button type="submit">Go</button>    
             </form>
           </li>
-        </div>
+        </div> %>
         <div class="nav-machin">
         <% if user_signed_in? %>
           <li class="nav-item active">

@@ -1,20 +1,13 @@
 <%= render 'shared/event_banner' %>
 <%= render 'shared/avatar' %>
 
-<h1>
-  <%= @event.name %>
-</h1>
-
-<p>
-  <%= @event.description %>
-</p>
-
-
-
-
-<%= link_to "Delete", event_path, method: :delete  %>
-<%= link_to "Edit", edit_event_path(@event) %>
-
-<%= render "shared/map" %>
-
-
+<div class="d-flex justify-content-around">
+  <div class="infos">
+    <h1><%= @event.name %></h1>
+    <p><%= @event.description %></p>
+      <%= link_to "Delete", event_path, method: :delete  %>
+      <%= link_to "Edit", edit_event_path(@event) %>
+      <%= link_to "Back", events_path  %>
+  </div>
+    <%= render "shared/map" %> 
+</div>

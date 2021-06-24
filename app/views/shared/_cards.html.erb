@@ -9,7 +9,17 @@
           <h2> <%= event.name %> </h2>
           <p> <%= event.description %> </p>
         </div>
-          <%= link_to "Like It", event_path(event)  %>
+        <div id="icone"> 
+          <%= link_to event_path(event) do %>
+          <i style="color: green; " class="fas fa-check-circle"></i>
+          <% end %>
+          <%= link_to  do %>
+            <i style="" class="fas fa-question"></i>
+          <% end %>
+          <%= link_to event_path(event) do %>
+           <i style="color: red;" class="fas fa-ban"></i>
+          <% end %>
+        </div>
       </div>
     </div>
   <% end %>
