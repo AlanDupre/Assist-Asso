@@ -1,0 +1,24 @@
+.need {
+  border: 1px;
+  border-color: black;
+}
+
+.category {
+  width: auto;
+  height: 70px;
+  border: 1px solid;
+  border-color:#000000;
+  border-radius: 50px;
+}
+
+.need-success {
+  border-color: #289672;
+}
+
+.need-wip {
+  border-color: #F6B214;
+}
+
+.need-empty {
+  border-color: #B10505;
+}
