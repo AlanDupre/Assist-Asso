@@ -1,6 +1,5 @@
 
-<div class="container">
-  <% @events.each do |event| %>
+<div class="container-cards">
     <div class="card-trip">
       <img src="<%= event.cover_pic %>" /> 
       <div class="card-trip-infos">
@@ -12,5 +11,4 @@
           <%= link_to "Like It", event_path(event)  %>
       </div>
     </div>
-  <% end %>
 </div>
