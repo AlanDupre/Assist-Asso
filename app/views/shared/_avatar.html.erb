@@ -1,3 +1,11 @@
 <div class="avatar-event">
 
+  <% if @event.photo.attached? %>
+  <%= cl_image_tag @event.photo.key, crop: :fill, height: "420", width: "327" %>
+  <% else %>
+  <p>il n'y a pas de photo</p>
+  <% end %>
+
+
+
 </div>
