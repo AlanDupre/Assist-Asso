@@ -1,0 +1,9 @@
+.container .new_event{
+  display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: baseline;
+	align-content: space-between;
+  text-align: center;
+}
