@@ -7,23 +7,12 @@
 @import "bootstrap/scss/bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import "flatpickr/dist/flatpickr";
 
 // Your CSS partials
 
 @import "pages/index";
 
 // Components
-
-@import "components/_alert";
-@import "components/_avatar";
-@import "components/_banner";
-@import "components/_cards";
-@import "components/_category_cards";
-@import "components/_event_item";
 @import "components/index";
-@import "components/_loading_bar";
-@import "components/_navbar";
-@import "components/_simple_form";
-@import "flatpickr/dist/flatpickr";
-
 
