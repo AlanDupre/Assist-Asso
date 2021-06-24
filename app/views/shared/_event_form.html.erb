@@ -1,0 +1,22 @@
+<div class="container new_event">
+
+  <%= simple_form_for(@event) do |f| %>
+    <div class="event-infos">
+      <%= f.input :name,  placeholder: 'Nom' %>
+      <%= f.input :description,  placeholder: 'Description'%>  
+      <%= f.input :name_asso, placeholder: 'Association' %> 
+    </div>
+    <div class="address-infos">
+        <%= f.input :address,  placeholder: 'Adresse' %>
+        <%= f.input :CP,  placeholder: 'Code Postal' %>
+        <%= f.input :city,  placeholder: 'Ville' %>
+    </div>
+      <div class= "date-infos">
+        <%= f.input :category,  placeholder: 'Catégorie' %>
+        <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+        <%= f.input :end_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+        <%= f.input :cover_pic %>
+        <%= f.submit "Create Event", class:"btn btn-success" %>
+      </div>
+  <% end %>
+</div>
