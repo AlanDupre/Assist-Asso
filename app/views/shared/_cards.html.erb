@@ -1,10 +1,6 @@
 
-
-<div class="container-cards">
-
 <div class="all-cards">
     <% @events.each do |event| %>
-
     <div class="card-trip">
       <img src="<%= event.cover_pic %>" /> 
       <div class="card-trip-infos">
@@ -26,5 +22,6 @@
         </div>
       </div>
     </div>
+  <% end %>
 </div>
 
