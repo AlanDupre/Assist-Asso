@@ -1,7 +1,10 @@
-<h1>SHOW EVENT</h1>
-
-
 <%= render 'shared/event_banner' %>
+
+<%= render 'shared/avatar' %>
+<h1>Nom de l'événement</h1>
+<p>Description</p>
+
 
 <%= link_to "Delete", event_path, method: :delete  %>
 <%= link_to "Edit", edit_event_path(@event) %>
+
