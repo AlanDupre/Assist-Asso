@@ -1,0 +1,16 @@
+<div class="need">
+    <% @event.needs.each do |need| %>
+      <div class="category">
+        <%= need.category %>
+        <%= need.name %>
+        <%= need.quantity %>
+      </div>
+    <% end %>
+    
+    <div>Contributeurs :</div>
+    <div>
+      <ul>
+        <li class="donation"><p>  </p></li>
+      </ul>
+    </div>
+</div>
