@@ -11,18 +11,18 @@
 
 <div class="container card-home">
   <div class="card-category" style="background: green">
-    Environnement
+    <p><%= link_to "Environnement", events_path(:category => "Environment")%></p> 
   </div>
 
   <div class="card-category" style="background: orange">
-    Alimentaire
+    <p><%= link_to "Alimentation", events_path(:category => "Alimentation")%></p> 
   </div>
 
   <div class="card-category" style="background: blue">
-    Humanitaire
+    <p> <%= link_to "Solidarity", events_path(:category => "Solidarity")%></p>
   </div>
 
   <div class="card-category" style="background: purple">
-    Culturel
+  <p><%= link_to "Cultural", events_path(:category => "Cultural")%></p>
   </div>
 </div>
