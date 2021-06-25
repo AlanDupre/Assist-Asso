@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   resources :events
   resources :needs, only: [:new, :create, :show, :edit, :update, :destroy]
   get "/dashboard", to: "dashboards#show"
+  get "/dashboard", to: "dashboards#owner"
 end
