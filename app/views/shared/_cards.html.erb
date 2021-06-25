@@ -1,7 +1,7 @@
 
 <div class="all-cards">
     <div class="card-trip">
-    <% if event.photo.attached? %>
+    <% if event.cover_img.attached? %>
       <%= cl_image_tag event.cover_img.key %>
       <% else %>
      <img src="https://png.pngtree.com/thumb_back/fw800/background/20191029/pngtree-light-green-color-background-image_320965.jpg">
