@@ -1,16 +1,22 @@
 <div class="need">
     <% @event.needs.each do |need| %>
-      <div class="category">
-        <%= need.category %>
-        <%= need.name %>
-        <%= need.quantity %>
+      <div class="d-flex justify-content-between align-items-center">
+        <div class="need-category"> 
+          <%= need.category %>
+        </div>
+        <div class="contributeur">
+          <div>Contributeurs :</div>
+        </div>
+        <div class="need-name">
+          <%= need.name %>
+        </div>
+        <div class="donation">
+            <%= need.name %>
+        </div>
+        <p>/</p>
+        <div class="quantity">
+          <%= need.quantity %>
+        </div>
       </div>
     <% end %>
-    
-    <div>Contributeurs :</div>
-    <div>
-      <ul>
-        <li class="donation"><p>  </p></li>
-      </ul>
-    </div>
 </div>
