@@ -6,6 +6,8 @@ class Event < ApplicationRecord
   has_many :donations, through: :needs
   has_many :whishlist_events, dependent: :destroy
   has_one_attached :photo
+  has_one_attached :cover_img
+  belongs_to :user
 
   belongs_to :user
 

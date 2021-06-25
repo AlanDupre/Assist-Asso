@@ -1,5 +1,4 @@
 <div class="banner-event" style="background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), 
-url(<%= @event.cover_pic %>)
-;">
+url(<%= cl_image_path(@event.cover_img.key) %>);">
 </div>
 
