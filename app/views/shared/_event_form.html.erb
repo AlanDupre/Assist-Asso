@@ -15,7 +15,7 @@
       <%= f.input :category,  placeholder: 'Catégorie' %>
       <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"} %>
       <%= f.input :end_date, as: :string, required: false, input_html: {class: "datepicker"} %>
-      <%= f.input :cover_pic %>
+      <%= f.input :cover_img, as: :file %>
       <%= f.input :photo, as: :file %>
       <%= f.submit "Create Event", class:"btn btn-success" %>
     </div>
