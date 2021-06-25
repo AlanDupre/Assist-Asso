@@ -1,0 +1,12 @@
+.dashboard-container {
+  display: flex;
+  .infos-dashboard {
+    margin: 20px;
+    background-color: #29BB89;
+    border-radius: 4px;
+  }
+  h3 {
+    font-size: 13px;
+    color: white;
+  }
+}
