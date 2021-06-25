@@ -1,5 +1,5 @@
 class NeedsController < ApplicationController
-  :show, :edit, :update, :destroy
+  # :show, :edit, :update, :destroy
 
   def show
     @need = Need.find(params[:id])
