@@ -17,15 +17,19 @@
         <a class="nav-item nav-link" href="#p3" data-toggle="tab">Messages</a>
       </nav>
     <div class="tab-content">
-      <div class="tab-pane fade show active" id="p1">Panneau 1</div>
+      <div class="tab-pane fade show active" id="p1">
+        <% @events.each do |event| %>
+          <%= render "shared/cards", event: event %>
+        <% end  %>       
+      </div>
       <div class="tab-pane fade" id="p2">
         <div class="col-8">
         <% @events.each do |event| %>
-          <%= render "shared/cards", event:event  %>
+          <%= render "shared/cards", event: event  %>
         <% end  %>
         </div>
       </div>
-      <div class="tab-pane fade" id="p3">Panneau 3</div> 
+      <div class="tab-pane fade" id="p3">Panneau 3</div>
     </div>
   </div>
 </div>
