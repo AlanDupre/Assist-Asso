@@ -3,20 +3,27 @@
   <%= simple_form_for(@event) do |f| %>
     <div class="event-infos">
       <%= f.input :name,  placeholder: 'Nom' %>
-      <%= f.input :description,  placeholder: 'Description'%>  
-      <%= f.input :name_asso, placeholder: 'Association' %> 
+      <%= f.input :address,  placeholder: 'Adresse' %>
+      <%= f.input :category,  collection: Event::CATEGORIES %>
+      <%= f.input :cover_img, as: :file %>
+      
     </div>
     <div class="address-infos">
-        <%= f.input :address,  placeholder: 'Adresse' %>
-        <%= f.input :CP,  placeholder: 'Code Postal' %>
-        <%= f.input :city,  placeholder: 'Ville' %>
+        <%= f.input :description,  placeholder: 'Description'%> 
+         <%= f.input :CP,  placeholder: 'Code Postal' %>
+         <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+          <%= f.input :photo, as: :file %>
+      
     </div>
     <div class= "date-infos">
-      <%= f.input :category,  collection: Event::CATEGORIES %>
-      <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+    <%= f.input :name_asso, placeholder: 'Association' %> 
+      <%= f.input :city,  placeholder: 'Ville' %>
       <%= f.input :end_date, as: :string, required: false, input_html: {class: "datepicker"} %>
-      <%= f.input :cover_img, as: :file %>
-      <%= f.input :photo, as: :file %>
+      <div class="photo">
+        
+       
+      </div>
+
       <%= f.submit "Create Event", class:"btn btn-success" %>
     </div>
   <% end %>

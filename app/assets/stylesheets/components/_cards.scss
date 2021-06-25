@@ -45,7 +45,14 @@
   margin-left: 600px;
 }
 
-#icone p {
-  margin-left: 176px;
+
+
+.btn-event-category {
+  text-decoration: none;
+  color: white;
 }
 
+.btn-event-category:hover {
+  color: white;
+  text-decoration: none;
+}
