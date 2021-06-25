@@ -1,9 +1,8 @@
 .container .new_event{
   display: flex;
-	flex-direction: column;
 	flex-wrap: nowrap;
-	justify-content: center;
+	justify-content: space-around;
 	align-items: baseline;
-	align-content: space-between;
   text-align: center;
+	margin: 20px;
 }

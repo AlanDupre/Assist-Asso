@@ -9,12 +9,12 @@ class EventsController < ApplicationController
       @events = Event.all
     end
     
-    # @markers = @events.geocoded.map do |event|
-    #   {
-    #     lat: event.latitude,
-    #     lng: event.longitude
-    #   }
-    # end
+    @markers = @events.geocoded.map do |event|
+      {
+        lat: event.latitude,
+        lng: event.longitude
+      }
+    end
   end
 
   def show

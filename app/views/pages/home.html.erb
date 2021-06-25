@@ -11,18 +11,18 @@
 
 <div class="container card-home">
   <div class="card-category" style="background: green">
-    <p><%= link_to "Environnement", events_path(:category => "Environment")%></p> 
+    <%= link_to "Environement", events_path(:category => "Environment"), class: "btn-event-category"%>
   </div>
 
   <div class="card-category" style="background: orange">
-    <p><%= link_to "Alimentation", events_path(:category => "Alimentation")%></p> 
+    <%= link_to "Alimentation", events_path(:category => "Alimentation"), class: "btn-event-category"%>
   </div>
 
   <div class="card-category" style="background: blue">
-    <p> <%= link_to "Solidarity", events_path(:category => "Solidarity")%></p>
+    <%= link_to "Solidarity", events_path(:category => "Solidarity"), class: "btn-event-category"%>
   </div>
 
   <div class="card-category" style="background: purple">
-  <p><%= link_to "Cultural", events_path(:category => "Cultural")%></p>
+    <%= link_to "Cultural", events_path(:category => "Cultural"), class: "btn-event-category"%>
   </div>
 </div>
