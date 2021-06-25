@@ -20,7 +20,9 @@
 
 <div class="d-flex">
   <div class="col-8">
-    <%= render "shared/cards" %>
+  <% @events.each do |event| %>
+    <%= render "shared/cards", event: event %>
+    <% end %>
   </div>
     <%= render "shared/map" %>
 </div>
