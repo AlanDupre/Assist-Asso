@@ -1,5 +1,4 @@
 class NeedsController < ApplicationController
-  # :show, :edit, :update, :destroy
 
   def show
     @need = Need.find(params[:id])
@@ -13,7 +12,7 @@ class NeedsController < ApplicationController
     @need = Need.new(need_params)
     if @need.save
       redirect_to event_path
-    else 
+    else
       render :new
     end
   end
