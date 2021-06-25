@@ -5,6 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :whishlist_events, dependent: :destroy
-  has_many :events, through: :whishlist_events, dependent: :destroy
+  has_many :events
   has_many :donations, dependent: :destroy
 end
