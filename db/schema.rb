@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_24_150223) do
+ActiveRecord::Schema.define(version: 2021_06_25_095007) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -71,6 +71,8 @@ ActiveRecord::Schema.define(version: 2021_06_24_150223) do
     t.string "cover_pic"
     t.float "latitude"
     t.float "longitude"
+    t.bigint "user_id"
+    t.index ["user_id"], name: "index_events_on_user_id"
   end
 
   create_table "messages", force: :cascade do |t|
@@ -125,6 +127,7 @@ ActiveRecord::Schema.define(version: 2021_06_24_150223) do
   add_foreign_key "comments", "users"
   add_foreign_key "donations", "needs"
   add_foreign_key "donations", "users"
+  add_foreign_key "events", "users"
   add_foreign_key "messages", "users"
   add_foreign_key "needs", "events"
   add_foreign_key "whishlist_events", "events"
