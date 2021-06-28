@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <%= link_to root_path, class: "navbar-brand" do %>
     <%= image_tag "Logo.png" %>
@@ -28,26 +29,24 @@
           </li>
         </div> %>
         <div class="nav-machin">
+=======
+<div class="container-navbar">    
+  <div class="navbar-tabs">
+    <ul>
+      <div>
+        <li><%= link_to "Assist'Asso", root_path, class: "navbar-lien" %></li>
+      </div>
+      <div class="nav-button">
+        <li><%= link_to "ALL EVENTS", "/events", class: "nav-link" %></li>
+>>>>>>> e88f081ae85f51f9f76550ab3810316747580db3
         <% if user_signed_in? %>
-          <li class="nav-item active">
-            <%= link_to "DASHBOARD", dashboard_path, class: "nav-link" %>
-          </li>
-          <%# <li class="nav-item">
-            <%= link_to "Messages", "#", class: "nav-link" %>
-          
-          <li class="nav-item">
-            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %>
-          </li>
+        <li><%= link_to "DASHBOARD", dashboard_path, class: "nav-link" %></li>
+        <li><%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %></li>
         <% else %>
-          <li>
-            <%= link_to "Sign up", new_user_registration_path, class: "nav-link" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-          </li>
+        <li><%= link_to "Sign up", new_user_registration_path, class: "nav-link" %></li>
+        <li><%= link_to "Login", new_user_session_path, class: "nav-link" %></li>
         <% end %>
-        </div>
-      </ul>
-    </div>
+      </div>      
+    </ul>
   </div>
 </div>
