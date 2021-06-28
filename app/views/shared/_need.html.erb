@@ -1,22 +1,32 @@
-<div class="need">
+<div class="need-new">
     <% @event.needs.each do |need| %>
-      <div class="d-flex justify-content-between align-items-center">
-        <div class="need-category"> 
-          <%= need.category %>
-        </div>
-        <div class="contributeur">
-          <div>Contributeurs :</div>
-        </div>
-        <div class="need-name">
-          <%= need.name %>
-        </div>
-        <div class="donation">
+      <div class="need">
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="need-category"> 
+            <%= need.category %>
+          </div>
+          <div class="donors">
+            <div>Donors :</div>
+          </div>
+          <div class="need-name">
             <%= need.name %>
+          </div>
+          <div class="donation">
+              <%= need.name %>
+          </div>
+          <p>/</p>
+          <div class="quantity">
+            <%= need.quantity %>
+          </div>
+          <%= link_to "✏️", edit_need_path(need), class: "btn btn-primary" %>
+          <%= link_to "❌", need_path(need), method: :delete, class: "btn btn-danger"  %>
         </div>
-        <p>/</p>
-        <div class="quantity">
-          <%= need.quantity %>
-        </div>
+        
+
       </div>
     <% end %>
 </div>
+<%# 
+        <div class="event-management">
+          
+        </div> %>

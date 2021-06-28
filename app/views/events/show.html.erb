@@ -2,6 +2,15 @@
 
 <div class="d-flex justify-content-around">
   <div class="infos">
+    <div class="event-management">
+      <%= link_to "Back to all events", events_path, class: "btn btn-info"  %>
+      <%= link_to "Edit your event", edit_event_path(@event), class: "btn btn-primary" %>
+      <%= link_to "Delete your event", event_path, method: :delete, class: "btn btn-danger"  %>
+    </div>
+    <h1><%= @event.name %></h1>
+    <p><%= @event.description %></p>
+    <%= render 'shared/need' %>
+    <%= link_to "Add a need", new_event_need_path(@event), class: "btn btn-primary" %>
     <h1 style="margin: 20px"><%= @event.name %></h1>
     <p><%= @event.description %></p>
     <%= render 'shared/need' %>
