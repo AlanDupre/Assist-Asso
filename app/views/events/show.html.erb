@@ -2,28 +2,31 @@
 
 <div class="d-flex justify-content-around">
   <div class="infos">
-      <h1 class="name-event"><%= @event.name %></h1>
-      <p><%= @event.description %></p>
-      <%= render 'shared/need' %>
-      <%= link_to "Add a need", new_event_need_path(@event), class: "btn btn-primary" %>
-
-    <!-- Button trigger modal -->
-<button type="button" class="btn btn-success" style="border-radius: 16px" data-toggle="modal" data-target="#exampleModal">
-  Go
-</button>
-
-    <div class="event-management">
-      <%= link_to "Back to all events", events_path, class: "btn btn-info"  %>
-      <%= link_to "Edit your event", edit_event_path(@event), class: "btn btn-primary" %>
-      <%= link_to "Delete your event", event_path, method: :delete, class: "btn btn-danger"  %>
+    <h1 class="name-event"><%= @event.name %></h1>
+    <p><%= @event.description %></p>
+    <div class="needs-card">
+      <div>
+        <%= render 'shared/need' %>
+      </div>
+      <div>
+        <%= link_to "Add a need", new_event_need_path(@event), class: "btn btn-primary" %>
+      </div>
     </div>
+  </div>
+        
+<%# Editing buttons %>
+<div class="event-management">
+  <%= link_to "Back to all events", events_path, class: "btn btn-info"  %>
+  <%= link_to "✏️ Edit your event", edit_event_path(@event), class: "btn btn-primary" %>
+  <%= link_to "❌ Delete your event", event_path, method: :delete, class: "btn btn-danger"  %>
+</div>
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Category</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Nom de l'item</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -38,6 +41,7 @@
     </div>
   </div>
 </div>
+
   </div>
     <%= render "shared/map" %> 
 </div>
