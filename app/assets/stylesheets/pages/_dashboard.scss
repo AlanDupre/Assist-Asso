@@ -1,12 +1,39 @@
+h1 {
+  margin: 20px;
+  margin-left: 600px;
+  
+}
+
 .dashboard-container {
   display: flex;
   .infos-dashboard {
     margin: 20px;
     background-color: #29BB89;
     border-radius: 4px;
+    width: 300px;
+    color: black;
   }
+
+  #infos {
+    color: white; 
+    margin: 20px;
+    font-weight: bold;
+  }
+
   h3 {
-    font-size: 13px;
+    font-size: 15px;
     color: white;
+    margin: 20px;
   }
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #29BB89;
 }

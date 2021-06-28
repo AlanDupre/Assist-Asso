@@ -12,10 +12,14 @@
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   margin: 20px;
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .card-home {
   display: flex;
   justify-content: space-around;
+}
+
+.icone-category {
+  width: 80px;
 }

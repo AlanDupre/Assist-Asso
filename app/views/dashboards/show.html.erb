@@ -1,20 +1,22 @@
-<%= console %>
-<h1>Dashboard</h1>
+
+<h1>DASHBOARD</h1>
 <div class="dashboard-container">
+
   <div class="infos-dashboard">
-      <h3>First Name : <%= @user.first_name %></h3>
-      <h3>Last Name : <%= @user.last_name %></h3>
-      <h3>Email : <%= @user.email %></h3>
-      <h3>Email : <%= @user.address %></h3>
-      <h3>Email : <%= @user.city %></h3>
+    <h2 id="infos">My Informations</h2>
+      <h3><%= @user.first_name %></h3>
+      <h3><%= @user.last_name %></h3>
+      <h3><%= @user.email %></h3>
+      <h3><%= @user.address %></h3>
+      <h3><%= @user.city %></h3>
   </div>
   <div class="d-flex flex-column">
       <nav class="nav nav-tabs">
       <% if current_user.events.size > 0 %>
-        <a class="nav-item nav-link active" href="#p1" data-toggle="tab">My event</a>
+        <a class="nav-item nav-link active" href="#p1" data-toggle="tab">MY EVENT</a>
       <% end %>
-        <a class="nav-item nav-link" href="#p2" data-toggle="tab">Wishlist Event</a>
-        <a class="nav-item nav-link" href="#p3" data-toggle="tab">Messages</a>
+        <a class="nav-item nav-link" href="#p2" data-toggle="tab">WISHLIST EVENTS</a>
+        <%# <a class="nav-item nav-link" href="#p3" data-toggle="tab">Messages</a> %>
       </nav>
     <div class="tab-content">
       <div class="tab-pane fade show active" id="p1">
