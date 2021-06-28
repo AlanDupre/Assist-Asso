@@ -1,7 +1,6 @@
 class EventsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
-
   def index
     if params[:category].present?
       @events = Event.where(category: params[:category])
@@ -19,7 +18,10 @@ class EventsController < ApplicationController
 
   def show
     @event = Event.find(params[:id])
+    @donation = Donation.new()
+    @needs = @event.needs
     if @event.geocoded?
+      @markers =
       @markers = [
         {
           lat: @event.latitude,
@@ -63,5 +65,9 @@ class EventsController < ApplicationController
 
   def event_params
     params.require(:event).permit(:name, :description, :address, :CP, :city, :name_asso, :category, :start_date, :end_date, :name_asso, :photo, :cover_img)
+  end
+
+  def donation_params
+    params.require(:donation).permit(:quantity)
   end
 end
