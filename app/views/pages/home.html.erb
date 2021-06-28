@@ -1,6 +1,6 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://www.macsf.fr/var/macsf/storage/images/macsf.fr/reglementation-et-actualite/actualites-et-lois-de-sante/afem/590139-3-fre-FR/A-la-rencontre-de-l-AFEM-association-d-Aide-aux-familles-et-entraide-medicale.jpg);">
   <div class="container">
-    <h1>Assist' Asso </h1>
+    <h1 style="font-size: 70px">Assist' Asso </h1>
     <p>Find an Event !</p>
     <%= link_to events_path do  %>
     <p class="btn btn-success" >Discover</p>
@@ -10,19 +10,30 @@
 
 
 <div class="container card-home">
-  <div class="card-category" style="background: green">
-    <%= link_to "Environement", events_path(:category => "Environment"), class: "btn-event-category"%>
+    <div class="card-category d-flex">
+      <%= link_to events_path(:category => "Environment") do%>
+        <img class="icone-category" src="https://image.flaticon.com/icons/png/512/1598/1598196.png">
+      <% end %>
+    </div>
+
+  <div class="card-category">
+    <%= link_to events_path(:category => "Alimentation") do%>
+     <img class="icone-category" src="https://image.flaticon.com/icons/png/512/3050/3050228.png">
+    <% end %>
+    
   </div>
 
-  <div class="card-category" style="background: orange">
-    <%= link_to "Alimentation", events_path(:category => "Alimentation"), class: "btn-event-category"%>
+  <div class="card-category" >
+    <%= link_to events_path(:category => "Solidarity") do%>
+      <img class="icone-category" src="https://image.flaticon.com/icons/png/512/3047/3047883.png">
+    <% end %>
   </div>
 
-  <div class="card-category" style="background: blue">
-    <%= link_to "Solidarity", events_path(:category => "Solidarity"), class: "btn-event-category"%>
-  </div>
-
-  <div class="card-category" style="background: purple">
-    <%= link_to "Cultural", events_path(:category => "Cultural"), class: "btn-event-category"%>
+  <div class="card-category" >
+    <%= link_to events_path(:category => "Cultural") do %>
+    <img class="icone-category" src="https://image.flaticon.com/icons/png/512/1344/1344461.png">
+    <% end %>
   </div>
 </div>
+
+
