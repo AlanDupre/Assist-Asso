@@ -1,11 +1,13 @@
 <div class="container new-need">
 
   <%= simple_form_for [@event,@need] do |f| %>
-    <div class="">
-      <%= f.input :category,  placeholder: 'Category' %>
-      <%= f.input :name,  placeholder: 'Name' %>
-      <%= f.input :quantity,  placeholder: 'Quantity' %>
-      <%= f.submit "Add your need", class:"btn btn-success" %>
+    <div class="class="event-infos row" style="margin-left: 380px; width: 400px">
+      <div class="col-sm">
+        <%= f.input :category,  placeholder: 'Category' %>
+        <%= f.input :name,  placeholder: 'Name' %>
+        <%= f.input :quantity,  placeholder: 'Quantity' %>
+        <%= f.submit "Add your need", class:"btn btn-ghost" %>
+      </div>
     </div>
 
   <% end %>

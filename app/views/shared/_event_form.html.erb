@@ -1,24 +1,30 @@
 <div class="container new_event">
   <div class ="form-box">
     <%= simple_form_for(@event) do |f| %>
-      <div class="event-infos">
-        <%= f.input :name,  placeholder: 'Nom' %>
-        <%= f.input :address,  placeholder: 'Adresse' %>
+      <div class="event-infos row" style="margin-left: 100px">
+      <div class="col-sm">
+        <%= f.input :name%>
+        <%= f.input :description%> 
+        <%= f.input :address%>
+        <%= f.input :name_asso%>
+      </div>
+
+     <div class="col-sm">
+        <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+        <%= f.input :end_date, as: :string, required: false, input_html: {class: "datepicker"} %> 
+      </div>
+
+      <div class="col-sm">
         <%= f.input :category,  collection: Event::CATEGORIES %>
         <%= f.input :cover_img, as: :file %>
-      </div>
-
-      <div class="address-infos">
-        <%= f.input :description,  placeholder: 'Description'%> 
-        <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"} %>
         <%= f.input :photo, as: :file %>
       </div>
-
-      <div class= "date-infos">
-        <%= f.input :name_asso, placeholder: 'Association' %> 
-        <%= f.input :end_date, as: :string, required: false, input_html: {class: "datepicker"} %> 
-        <%= f.submit "Create Event", class:"btn btn-outline-success" %>
+        
       </div>
+    </div>
+    <div class="btn-next-step">
+        <%= f.submit "NEXT STEP", class:"btn btn-ghost"%>
+    </div>
     <% end %>
-  </div>
+  
 </div>
