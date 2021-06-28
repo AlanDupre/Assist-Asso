@@ -2,6 +2,13 @@
 
 <div class="d-flex justify-content-around">
   <div class="infos">
+<<<<<<< HEAD
+    <h1 class="name-event"><%= @event.name %></h1>
+    <p><%= @event.description %></p>
+    <div class="needs-card">
+      <div>
+        <%= render 'shared/need' %>
+=======
       <h1 class="name-event" style="margin-top: 80px"><%= @event.name %></h1>
       <p><%= @event.description %></p>
       <%= render 'shared/need' %>
@@ -31,13 +38,21 @@
       <div class="modal-body" ; style="text-align: center">
         <p>Quantity</p>
         <input type="number">
+>>>>>>> e88f081ae85f51f9f76550ab3810316747580db3
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-success" style="border-radius: 16px" >Save changes</button>
+      <div>
+        <%= link_to "Add a need", new_event_need_path(@event), class: "btn btn-primary" %>
       </div>
     </div>
   </div>
+        
+<%# Editing buttons %>
+<div class="event-management">
+  <%= link_to "Back to all events", events_path, class: "btn btn-info"  %>
+  <%= link_to "✏️ Edit your event", edit_event_path(@event), class: "btn btn-primary" %>
+  <%= link_to "❌ Delete your event", event_path, method: :delete, class: "btn btn-danger"  %>
 </div>
+
   </div>
     <%= render "shared/map" %> 
 </div>
