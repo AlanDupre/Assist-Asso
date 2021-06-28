@@ -2,9 +2,13 @@
   <% if @event.cover_img.attached? %>
     <div class="banner-event" style="background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), 
   url(<%= cl_image_path(@event.cover_img.key) %>);">
+  <div class="container">
+      <%= render 'shared/avatar' %>
   </div>
   <% else %>
     <img src="http://res.cloudinary.com/alandupre02/image/upload/vopasox4b6av2u8ylzg683ve1anv" alt="Assist'Asso default cover picture">
-  <% end %>
+    <div class="container">
+    <%= render 'shared/avatar' %>
+  </div>
+  <% end %> 
 </div>
-

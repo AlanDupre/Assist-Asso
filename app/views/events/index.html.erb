@@ -1,20 +1,30 @@
 
+<h1 class="title">DISCOVER ALL THE EVENTS</h1>
 <div class="container align-items-left card-home">
-  <div class="card-category" style="background: green">
-    <%= link_to "Environment" ,events_path(:category => "Environment"), class: "btn-event-category" %>
-  </div>
-  
 
-  <div class="card-category" style="background: orange">
-    <%= link_to "Alimentation" ,events_path(:category => "Alimentation"), class: "btn-event-category"  %>
+  <div class="card-category"">
+    <%= link_to events_path(:category => "Environment") do%>
+      <img class="icone-category" src="https://image.flaticon.com/icons/png/512/1598/1598196.png">
+    <% end %>
+  </div>
+   
+  <div class="card-category">
+    <%= link_to events_path(:category => "Alimentation") do%>
+     <img class="icone-category" src="https://image.flaticon.com/icons/png/512/3050/3050228.png">
+    <% end %>
+    
   </div>
 
-  <div class="card-category" style="background: blue">
-    <%= link_to "Solidarity" ,events_path(:category => "Solidarity"), class: "btn-event-category"  %>
+  <div class="card-category" >
+    <%= link_to events_path(:category => "Solidarity") do%>
+      <img class="icone-category" src="https://image.flaticon.com/icons/png/512/3047/3047883.png">
+    <% end %>
   </div>
 
-  <div class="card-category" style="background: purple">
-    <%= link_to "Cultural" ,events_path(:category => "Cultural"), class: "btn-event-category"  %>
+  <div class="card-category" >
+    <%= link_to events_path(:category => "Cultural") do %>
+    <img class="icone-category" src="https://image.flaticon.com/icons/png/512/1344/1344461.png">
+    <% end %>
   </div>
 </div>
 

@@ -14,9 +14,9 @@
           <li class="nav-item">
             <%= link_to "ALL EVENTS", "/events", class: "nav-link" %>
           </li>
-          <li class="nav-item">
+          <%# <li class="nav-item">
             <%= link_to "Créer", new_event_path, class: "nav-link" %>
-          </li>
+          <%# </li> %> 
         </div>
         <%# <div>
           <li class="nav-search">
@@ -30,11 +30,11 @@
         <div class="nav-machin">
         <% if user_signed_in? %>
           <li class="nav-item active">
-            <%= link_to "Dashboard", dashboard_path, class: "nav-link" %>
+            <%= link_to "DASHBOARD", dashboard_path, class: "nav-link" %>
           </li>
-          <li class="nav-item">
+          <%# <li class="nav-item">
             <%= link_to "Messages", "#", class: "nav-link" %>
-          </li>
+          
           <li class="nav-item">
             <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %>
           </li>

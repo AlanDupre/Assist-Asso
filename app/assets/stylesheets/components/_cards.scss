@@ -23,7 +23,6 @@
   margin: 0;
 }
 
-
 .card-trip .card-trip-infos {
   padding: 16px;
   display: flex;
@@ -35,7 +34,7 @@
 .card-trip-infos .card-trip-user {
   position: absolute;
   right: 16px;
-  top: -20px;
+  top: -185px;
   width: 40px;
 }
 
@@ -46,7 +45,6 @@
 }
 
 
-
 .btn-event-category {
   text-decoration: none;
   color: white;
@@ -55,4 +53,9 @@
 .btn-event-category:hover {
   color: white;
   text-decoration: none;
+}
+
+#icone p {
+  font-weight: bold;
+  color: whitesmoke;
 }
