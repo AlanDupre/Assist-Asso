@@ -1,8 +1,14 @@
 .container .new_event{
   display: flex;
 	flex-wrap: nowrap;
-	justify-content: space-around;
+	justify-content: space-between;
 	align-items: baseline;
   text-align: center;
 	margin: 20px;
+	border-radius: 4px;
+}
+
+.form-box {
+	background-color: #289672;
+	border-radius: 4px;
 }
