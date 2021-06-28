@@ -7,22 +7,23 @@ h1 {
   display: flex;
   .infos-dashboard {
     margin: 20px;
-    background-color: #29BB89;
     border-radius: 4px;
     width: 300px;
     color: black;
     margin-top: 20px;
+    border: 1mm ridge black;
+    height: 330px;
   }
 
   #infos {
-    color: white; 
+    color: black; 
     margin: 20px;
     font-weight: bold;
   }
 
   h3 {
     font-size: 15px;
-    color: white;
+    color: black;
     margin: 20px;
   }
 }
@@ -37,3 +38,10 @@ a {
 a:hover {
   color: #29BB89;
 }
+
+.icone-contact{
+  width: 50px;
+  margin: 20px;
+  margin-left: 120px;
+}
+
