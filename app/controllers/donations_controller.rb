@@ -5,7 +5,7 @@ class DonationsController < ApplicationController
     @donation.user = current_user
     @donation.need = @need
     if @donation.save
-      redirect_to root_path
+      redirect_to event_path(@need.event)
     else
       redirect_to event_path
     end
