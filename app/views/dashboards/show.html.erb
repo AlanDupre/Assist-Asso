@@ -1,9 +1,12 @@
-<h1>DASHBOARD</h1>
+
+<img src="https://image.flaticon.com/icons/png/512/1548/1548723.png" style="width: 80px; margin: 20px;
+  margin-left: 600px" >DASHBOARD
+
 
 <div class="dashboard-container">
 
   <div class="infos-dashboard">
-    <h2 id="infos">My Informations</h2>
+    <h2 id="infos">My Information</h2>
       <h3><%= @user.first_name %></h3>
       <h3><%= @user.last_name %></h3>
       <h3><%= @user.email %></h3>
@@ -22,16 +25,20 @@
       <div class="tab-pane fade show active" id="p1">
         <% @events.each do |event| %>
           <%= render "shared/cards", event: event %>
-        <% end  %>       
+        <% end  %>    
+        <img src="https://image.flaticon.com/icons/png/512/921/921591.png" style="width: 80px; margin: 20px; margin-left: 260px;">STATISTICS 
+        
       </div>
       <div class="tab-pane fade" id="p2">
         <div class="col-8">
         <% @events.each do |event| %>
-          <%= render "shared/cards", event: event  %>
+          <%= render "shared/cards", event: event %>
         <% end  %>
         </div>
       </div>
-      <div class="tab-pane fade" id="p3">Panneau 3</div>
-    </div>
+      <%# <div class="tab-pane fade" id="p3">Panneau 3</div>
+    </div> %>
   </div>
 </div>
+
+
