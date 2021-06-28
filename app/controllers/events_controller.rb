@@ -22,10 +22,12 @@ class EventsController < ApplicationController
     @needs = @event.needs
     if @event.geocoded?
       @markers =
+      @markers = [
         {
           lat: @event.latitude,
           lng: @event.longitude
         }
+      ]
     end
   end
 
