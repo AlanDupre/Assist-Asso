@@ -8,7 +8,7 @@ class EventsController < ApplicationController
     else
       @events = Event.all
     end
-    
+
     @markers = @events.geocoded.map do |event|
       {
         lat: event.latitude,
@@ -20,11 +20,12 @@ class EventsController < ApplicationController
   def show
     @event = Event.find(params[:id])
     if @event.geocoded?
-      @markers =  
+      @markers = [
         {
           lat: @event.latitude,
           lng: @event.longitude
         }
+      ]
     end
   end
 
