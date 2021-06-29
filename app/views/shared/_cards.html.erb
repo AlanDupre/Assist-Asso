@@ -1,19 +1,19 @@
 <div class="all-cards">
     <div class="card-trip">
-    <% if event.cover_img.attached? %>
-      <%= cl_image_tag event.cover_img.key %>
+      <% if event.cover_img.attached? %>
+        <%= cl_image_tag event.cover_img.key %>
       <% else %>
-     <img src="https://png.pngtree.com/thumb_back/fw800/background/20191029/pngtree-light-green-color-background-image_320965.jpg">
-     <% end %>
+        <img src="https://png.pngtree.com/thumb_back/fw800/background/20191029/pngtree-light-green-color-background-image_320965.jpg">
+      <% end %>
       <div class="card-trip-infos">
         <div>
           <img src="https://i.pinimg.com/236x/f4/49/df/f449dfa7d6c221507c1962f2102d92b2--vector-photo-app-development.jpg" class="card-trip-user avatar-bordered" />
-          <h2> <%= event.name %> </h2>
-          <p> <%= event.description %> </p>
+          <h2><%= event.name %></h2>
+          <p><%= event.description %></p>
         </div>
         <div> 
           <%= link_to event_path(event) do %>
-          <button class="favorite styled" type="button">Discover The Event</button>
+            <button class="favorite styled" type="button">Discover The Event</button>
           <% end %>
         </div>
       </div>
