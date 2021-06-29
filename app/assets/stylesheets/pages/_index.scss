@@ -8,12 +8,12 @@
   margin-top: 30px;
 }
 
-
 .search {
   width: 507px;
   margin-left: 501px;
   margin-top: 20px;
   margin-bottom: 20px;
+}
 
 #rotate:hover {
   animation: rotation 3s infinite linear;
@@ -63,5 +63,4 @@
     -webkit-transform: scale(1.3);
     -ms-transform: scale(1.3);
     transform: scale(1.3);
-
 }
