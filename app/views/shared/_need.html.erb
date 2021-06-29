@@ -37,9 +37,11 @@
         </div>
         <div class="event-management">
           <!-- Button trigger modal -->
-          <button type="button" class="btn btn-success" style="border-radius: 16px" data-toggle="modal" data-target="#exampleModal">
+          <% if donation_quantity < need.quantity %>
+            <button type="button" class="btn btn-success" style="border-radius: 16px" data-toggle="modal" data-target="#exampleModal-<%=need.id%>">
           ❤️ Give
-          </button>
+            </button>
+          <% end %>
 
           <%# admin-buttons %>
           <%= link_to "✏️", edit_need_path(need)  %>
@@ -49,7 +51,7 @@
     </div>
 
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="exampleModal-<%=need.id%>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
@@ -67,3 +69,4 @@
     </div>
   <% end %>
 </div>
+
