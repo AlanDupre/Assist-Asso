@@ -63,10 +63,7 @@ student.cover_img.attach(io: student_banner, filename: 'banner_student.jpg', con
 
 
 Whishlist =  WhishlistEvent.create!(user: maxence, event: clothing)
-# Whishlist =  WhishlistEvent.create!(user: alan, event: solidarity)
-# Whishlist =  WhishlistEvent.create!(user: adrien, event: environment)
-# Whishlist =  WhishlistEvent.create!(user: alexis, event: cultural)
-# Whishlist =  WhishlistEvent.create!(user: jp, event: women)
+
 
 
 food = Need.create!(category: "Food", name: "Sandwich", quantity: 5, event: clothing)
