@@ -55,17 +55,16 @@
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-                  <div id="modal">
-                    <%= simple_form_for [need, @donation] do |f| %>
-                    <div class="input-quantity">
-                      <%= f.input :quantity %>
-                    </div>
-                    <div class="btn-modal">
-                      <%= f.button :submit, class:"btn-success"%>  
-                    </div>
-                  <% end %> 
+              <div id="modal">
+                <%= simple_form_for [need, @donation] do |f| %>
+                <div class="input-quantity">
+                  <%= f.input :quantity %>
+                </div>
+                <div class="btn-modal">
+                  <%= f.button :submit, class:"btn-success"%>  
+                </div>
+              <% end %> 
           </div>
-      
         </div>
       </div>
     </div>
