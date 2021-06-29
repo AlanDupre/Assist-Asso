@@ -71,4 +71,4 @@ Whishlist =  WhishlistEvent.create!(user: maxence, event: clothing)
 
 food = Need.create!(category: "Food", name: "Sandwich", quantity: 5, event: clothing)
 
-donation = Donation.create!(quantity: 10, user: maxence, need: food)
+donation = Donation.create!(quantity: 5, user: maxence, need: food)
