@@ -2,15 +2,27 @@
   <% @event.needs.each do |need| %>
     <div class="need">
       <div class="d-flex justify-content-between align-items-center">
-        <div class="need-name">
-          <%= need.name %>
-        </div>
-        <div class="need-category"> 
+      <div class="need-category"> 
+        <% if need.category == "People" %>
+          <img style="width: 30px" src="https://image.flaticon.com/icons/png/512/681/681392.png">
+        <% elsif need.category == "Money" %>
+          <img style="width: 30px" src="https://image.flaticon.com/icons/png/512/3135/3135706.png">
+        <% elsif need.category == "Food" %>
+          <img style="width: 30px" src="https://image.flaticon.com/icons/png/512/498/498229.png">
+        <% elsif need.category == "Furnitures" %>
+          <img style="width: 30px" src="https://image.flaticon.com/icons/png/512/2708/2708109.png">
+        <% else  %>
           <%= need.category %>
+        <% end %>
         </div>
-        <%# <div class="donors">
-          <div>Donors :</div>
-          <%# <%= need.donations %>
+
+
+
+
+        <div class="need-name">
+         <%= need.name %>
+        </div>
+ 
         <div class="donation">
           <% donation_array = need.donations.map do |donation| %>
             <% donation.quantity %>
