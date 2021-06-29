@@ -1,6 +1,6 @@
 <h1 id="h1-dashboard">DASHBOARD <img src="https://image.flaticon.com/icons/png/512/1548/1548723.png" style="width: 50px;"></h1> 
 
-___________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________</p>
+____________________________________________________________________________________________________________________________________________________________________________________________</p>
 <%= link_to "CREATE +", new_event_path, class: "btn btn-ghost" %>
 <div class="dashboard-container" style="margin-top: 40px; margin-left: 40px;">
 
@@ -19,16 +19,22 @@ ________________________________________________________________________________
         <a class="nav-item nav-link active" href="#p1" data-toggle="tab">MY EVENT</a>
       <% end %>
         <a class="nav-item nav-link" href="#p2" data-toggle="tab">WISHLIST EVENTS</a>
-        <%# <a class="nav-item nav-link" href="#p3" data-toggle="tab">Messages</a> %>
       </nav>
     <div class="tab-content">
       <div class="tab-pane fade show active" id="p1">
         <% @events.each do |event| %>
           <%= render "shared/cards", event: event %>
         <% end  %>    
-        <img src="https://image.flaticon.com/icons/png/512/921/921591.png" style="width: 80px; margin: 20px; margin-left: 260px;">STATISTICS 
 
-        
+        <div class="d-flex">
+          <div class="progression">
+            <img src="https://image.flaticon.com/icons/png/512/921/921591.png" style="width: 80px; margin-left:30px;">     PROGRESSION
+          </div>
+            <div class="progress" style="width: 700px; height: 30px; background-color: white; border-radius: 20px; border: 1px solid; border-color:#000000; margin-left: 100px; margin-top: 30px">
+              <div class="progress-bar bg-success" style="width: <%= @percent %>%;" role="progressbar" aria-valuenow="<%= @percent %>" aria-valuemin="0" aria-valuemax="100"> <%= @percent %> %</div> 
+            </div>
+        </div>
+
       </div>
       <div class="tab-pane fade" id="p2">
         <div class="col-8">

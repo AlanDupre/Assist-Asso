@@ -1,23 +1,20 @@
 <div class="need-new">
   <% @event.needs.each do |need| %>
     <div class="need">
-      <div class="d-flex justify-content-between align-items-center">
+      <div class="d-flex justify-content-between align-items-center" style="margin-top: 10px">
       <div class="need-category"> 
         <% if need.category == "People" %>
-          <img style="width: 30px" src="https://image.flaticon.com/icons/png/512/681/681392.png">
+          <img style="width: 60px" src="https://image.flaticon.com/icons/png/512/681/681392.png">
         <% elsif need.category == "Money" %>
-          <img style="width: 30px" src="https://image.flaticon.com/icons/png/512/3135/3135706.png">
+          <img style="width: 60px" src="https://image.flaticon.com/icons/png/512/3135/3135706.png">
         <% elsif need.category == "Food" %>
-          <img style="width: 30px" src="https://image.flaticon.com/icons/png/512/498/498229.png">
+          <img style="width: 60px" src="https://image.flaticon.com/icons/png/512/498/498229.png">
         <% elsif need.category == "Furnitures" %>
-          <img style="width: 30px" src="https://image.flaticon.com/icons/png/512/2708/2708109.png">
+          <img style="width: 60px" src="https://image.flaticon.com/icons/png/512/2708/2708109.png">
         <% else  %>
           <%= need.category %>
         <% end %>
         </div>
-
-
-
 
         <div class="need-name">
          <%= need.name %>
@@ -29,9 +26,7 @@
           <% end %>
           <%= donation_quantity = donation_array.reduce(0,:+) %>
         </div>
-        <div>
-          <p>/</p>
-        </div>
+          /
         <div class="quantity">
           <%= need.quantity %>
         </div>
@@ -55,15 +50,22 @@
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Nom de l'item</h5>
+            <h5 class="modal-title" id="exampleModalLabel"> <%= need.name %> </h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <%= simple_form_for [need, @donation] do |f| %>
-            <%= f.input :quantity %>
-            <%= f.button :submit %>
-          <% end %>
+                  <div id="modal">
+                    <%= simple_form_for [need, @donation] do |f| %>
+                    <div class="input-quantity">
+                      <%= f.input :quantity %>
+                    </div>
+                    <div class="btn-modal">
+                      <%= f.button :submit, class:"btn-success"%>  
+                    </div>
+                  <% end %> 
+          </div>
+      
         </div>
       </div>
     </div>

@@ -1,11 +1,11 @@
 .need {
   width: 750px;
-  height: auto;
+  height: 80px;
   border: 1px solid;
   border-color:#000000;
   border-radius: 50px;
   padding: 0px 30px;
-  margin: 10px 10px;
+  margin: 30px 30px;
 }
 
 .need-success {
@@ -18,4 +18,15 @@
 
 .need-empty {
   border-color: #B10505;
+}
+
+.input-quantity {
+  width: 250px;
+  margin-left: 130px;
+  margin-top: 20px;
+}
+
+.btn-modal {
+  margin: 20px;
+  margin-left: 181px;
 }

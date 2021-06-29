@@ -1,6 +1,6 @@
 
 <h1 class="title d-flex justify-content-center">DISCOVER ALL THE EVENTS</h1>
-<div class="container align-items-left card-home">
+<div class="container align-items-left card-home" style="margin-top: -30px">
 
 
   <div class="name-category">
@@ -42,7 +42,7 @@
 
   
 <%= form_tag events_path, class:"d-flex justify-content-center", method: :get do %>
-  <div class="search">
+  <div class="search d-flex">
     <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Find a Event" %>
     <%= submit_tag "Search", class: "btn btn-success" %>
   </div>
