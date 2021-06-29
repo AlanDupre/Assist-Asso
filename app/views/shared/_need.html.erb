@@ -13,19 +13,17 @@
           <%= need.name %>
         </div>
         <div class="donation">
-          
           <% donation_array = need.donations.map do |donation| %>
           <% donation.quantity %>
           <% end %>
           <%= donation_quantity = donation_array.reduce(0,:+) %>
-
-        </div>
-        <p>/</p>
-        <div class="quantity">
+          <p>/</p>
+          <div class="quantity">
           <%= need.quantity %>
+          </div>
         </div>
+        
         <div class="event-management">
-
           <!-- Button trigger modal -->
           <button type="button" class="btn btn-success" style="border-radius: 16px" data-toggle="modal" data-target="#exampleModal">
           ❤️ Give
@@ -46,13 +44,6 @@
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <%# <div class="modal-body" ; style="text-align: center">
-            <p>Quantity</p>
-            <input type="number">
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-success" style="border-radius: 16px" >Save changes</button>
-          </div> %>
           <%= simple_form_for [need, @donation] do |f| %>
             <%= f.input :quantity %>
             <%= f.button :submit %>
