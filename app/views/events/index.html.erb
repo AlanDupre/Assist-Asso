@@ -28,6 +28,13 @@
   </div>
 </div>
 
+      <%= form_tag events_path, method: :get do %>
+        <%= text_field_tag :query, params[:query],class: "form-control",placeholder: "Find a Event" %>
+        <%= submit_tag "Search", class: "btn btn-primary" %>
+      <% end %>
+
+      <%= console %>
+
 <div class="d-flex">
   <div class="col-8">
   <% @events.each do |event| %>
