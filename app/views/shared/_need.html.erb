@@ -2,27 +2,27 @@
   <% @event.needs.each do |need| %>
     <div class="need">
       <div class="d-flex justify-content-between align-items-center">
+        <div class="need-name">
+          <%= need.name %>
+        </div>
         <div class="need-category"> 
           <%= need.category %>
         </div>
         <%# <div class="donors">
           <div>Donors :</div>
           <%# <%= need.donations %>
-        
-        <div class="need-name">
-          <%= need.name %>
-        </div>
         <div class="donation">
           <% donation_array = need.donations.map do |donation| %>
-          <% donation.quantity %>
+            <% donation.quantity %>
           <% end %>
           <%= donation_quantity = donation_array.reduce(0,:+) %>
-          <p>/</p>
-          <div class="quantity">
-          <%= need.quantity %>
-          </div>
         </div>
-        
+        <div>
+          <p>/</p>
+        </div>
+        <div class="quantity">
+          <%= need.quantity %>
+        </div>
         <div class="event-management">
           <!-- Button trigger modal -->
           <button type="button" class="btn btn-success" style="border-radius: 16px" data-toggle="modal" data-target="#exampleModal">
@@ -35,6 +35,10 @@
         </div>
       </div>
     </div>
+        
+    
+
+      <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
@@ -52,5 +56,4 @@
       </div>
     </div>
   <% end %>
-  <!-- Modal -->
 </div>
