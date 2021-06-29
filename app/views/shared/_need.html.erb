@@ -5,10 +5,10 @@
         <div class="need-category"> 
           <%= need.category %>
         </div>
-        <div class="donors">
+        <%# <div class="donors">
           <div>Donors :</div>
-          <%# <%= need.donations %> %>
-        </div>
+          <%# <%= need.donations %>
+        
         <div class="need-name">
           <%= need.name %>
         </div>
@@ -30,8 +30,8 @@
           </button>
 
           <%# admin-buttons %>
-          <%= link_to "✏️", edit_need_path(need), class: "btn btn-primary" %>
-          <%= link_to "❌", need_path(need), method: :delete, class: "btn btn-danger"  %>
+          <%= link_to "✏️", edit_need_path(need)  %>
+          <%= link_to "❌", need_path(need), method: :delete %>
         </div>
       </div>
     </div>
