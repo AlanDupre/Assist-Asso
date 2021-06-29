@@ -8,6 +8,12 @@
   margin-top: 30px;
 }
 
+
+.name-category {
+  display: flex;
+  align-items: center;
+}
+
 .search {
   width: 507px;
   margin-left: 501px;
@@ -64,3 +70,4 @@
     -ms-transform: scale(1.3);
     transform: scale(1.3);
 }
+
