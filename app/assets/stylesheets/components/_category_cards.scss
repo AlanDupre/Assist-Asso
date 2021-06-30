@@ -1,6 +1,6 @@
 .card-category {
   height: 200px;
-  width: 40%;
+  width: 20%;
   background-position: center;
   display: flex;
   justify-content: center;
@@ -11,6 +11,10 @@
   border-radius: 5px;
   margin: 20px;
   object-fit: cover;
+}
+
+.name-category {
+  margin-bottom: -46px;
 }
 
 .card-home {
