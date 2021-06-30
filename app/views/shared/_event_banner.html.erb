@@ -1,13 +1,12 @@
 <div>
   <% if @event.cover_img.attached? %>
-    <div class="banner-event" style="background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), 
-    url(<%= cl_image_path(@event.cover_img.key) %>); max-height: 200px">
+    <div class="banner-event" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= cl_image_path(@event.cover_img.key) %>);height: 200px; background-size: cover; background-position: center;">
       <div class="container d-flex" style="padding-top: 50px">
         <%= render 'shared/avatar' %>
-        <div class="name-asso" style="padding-top: 37px; padding-left: 20px; color: white; font-size: 2.14286rem; font-weight: bold">
+        <div class="name-asso" style="padding-top: 100px; padding-left: 20px; color: white; font-size: 2.14286rem; font-weight: bold">
         <%= @event.name_asso %>
         </div>
-        <div class="address" style="padding-top: 106px; margin-left: -225px">
+        <div class="address" style="padding-top: 160px; margin-left: -246px">
         <img src="https://image.flaticon.com/icons/png/512/3313/3313929.png" style="width: 20px"><%= @event.address %>,    <%= @event.CP %>,    <%= @event.city %>
       </div>
     </div>
