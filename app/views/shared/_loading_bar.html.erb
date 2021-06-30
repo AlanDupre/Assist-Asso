@@ -1,3 +1,8 @@
 <div id="eventProgress">
-  <div id="eventBar"></div>
+<%#   <div id="eventBar"> %>
+  <div class="progress" style="width: 210px; height: 35px; background-color: white; border-radius: 20px; border: 1px solid; border-color:#000000">
+    <div class="progress-bar bg-success" style="width: <%= @percent %>%;" role="progressbar" aria-valuenow="<%= @percent %>" aria-valuemin="0" aria-valuemax="100"> <%= @percent %> %</div> 
+  </div>
+<%# </div> %>
 </div>
+
