@@ -44,7 +44,7 @@
 <%= form_tag events_path, class:"d-flex justify-content-center", method: :get do %>
   <div class="search d-flex">
     <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Find a Event" %>
-    <%= submit_tag "Search", class: "btn btn-success" %>
+    <div class="search-btn"><%= submit_tag "Search", class: "btn btn-success" %></div>
   </div>
 <% end %>
   
