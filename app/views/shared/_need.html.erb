@@ -1,49 +1,51 @@
-<div class="need-new">
+<div class="need-new d-flex">
   <% @event.needs.each do |need| %>
-    <div class="need">
-      <div class="d-flex justify-content-between align-items-center" style="margin-top: 10px">
-      <div class="need-category"> 
+
+
+<div class="card-need" style="margin-top: 60px;">
+
+     <div class="need-category" > 
         <% if need.category == "People" %>
-          <img style="width: 60px" src="https://image.flaticon.com/icons/png/512/681/681392.png">
+          <img style="width: 120px; margin-left: 40px; margin-top: 28px;" src="https://image.flaticon.com/icons/png/512/681/681392.png">
         <% elsif need.category == "Money" %>
-          <img style="width: 60px" src="https://image.flaticon.com/icons/png/512/3135/3135706.png">
+          <img style="width: 120px; margin-left: 40px; margin-top: 28px;" src="https://image.flaticon.com/icons/png/512/3135/3135706.png">
         <% elsif need.category == "Food" %>
-          <img style="width: 60px" src="https://image.flaticon.com/icons/png/512/498/498229.png">
+          <img style="width: 120px; margin-left: 40px; margin-top: 28px;" src="https://image.flaticon.com/icons/png/512/498/498229.png">
         <% elsif need.category == "Furnitures" %>
-          <img style="width: 60px" src="https://image.flaticon.com/icons/png/512/2708/2708109.png">
+          <img style="width: 120px; margin-left: 40px; margin-top: 28px;" src="https://image.flaticon.com/icons/png/512/2708/2708109.png">
         <% else  %>
           <%= need.category %>
         <% end %>
+      </div>
+
+      <div class="card-need-infos">
+        <div class="card-need-border">
+          <p> <%= need.name %></p>
         </div>
 
-        <div class="need-name">
-         <%= need.name %>
-        </div>
- 
-        <div class="donation">
-          <% donation_array = need.donations.map do |donation| %>
-            <% donation.quantity %>
-          <% end %>
-          <%= donation_quantity = donation_array.reduce(0,:+) %>
-        </div>
-          /
-        <div class="quantity">
-          <%= need.quantity %>
-        </div>
-        <div class="event-management">
-          <!-- Button trigger modal -->
-          <% if donation_quantity < need.quantity %>
-            <button type="button" class="btn btn-success" style="border-radius: 16px" data-toggle="modal" data-target="#exampleModal-<%=need.id%>">
-          ❤️ Give
-            </button>
-          <% end %>
 
-          <%# admin-buttons %>
-          <%= link_to "✏️", edit_need_path(need)  %>
-          <%= link_to "❌", need_path(need), method: :delete %>
+        <div class="card-need-quantity d-flex">
+         
+              <% donation_array = need.donations.map do |donation| %>
+                <% donation.quantity %>
+              <% end %>
+          <h2 style="margin-left: 50px;"><%= donation_quantity = donation_array.reduce(0,:+) %></h2>
+             <h2>/<%= need.quantity %></h2> 
+       
         </div>
       </div>
-    </div>
+
+
+          <% if donation_quantity < need.quantity %>
+            <button id="button-give" type="button" class="btn btn-ghost" style="border-radius: 16px" data-toggle="modal" data-target="#exampleModal-<%=need.id%>">GIVE
+            </button>
+          <% end %>
+</div>
+
+
+   
+      <div class="d-flex justify-content-between align-items-center" style="margin-top: 10px"></div>
+   
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModal-<%=need.id%>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
