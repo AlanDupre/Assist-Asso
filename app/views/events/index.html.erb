@@ -1,12 +1,10 @@
 
 <h1 class="title d-flex justify-content-center">DISCOVER ALL THE EVENTS</h1>
-<%# <div class="container align-items-left card-home" style="margin-top: -30px"> %>
-
-<div class="container justify-content-center">
-  <div class="row">
+<div class="container-index">
+  <div class="row" style="margin-top: -70px">
     <div class="col-3">
       <div class="name-category">
-        <h2>Solidarity</h2>
+        <h3>Solidarity</h3>
         <div class="card-category">
           <%= link_to events_path(:category => "Solidarity") do%>
             <img id="rotate" class="icone-category" src="https://image.flaticon.com/icons/png/512/3047/3047883.png">
@@ -16,7 +14,7 @@
     </div>
     <div class="col-3">
       <div class="name-category">
-        <h2>Environment</h2>
+        <h3>Environment</h3>
         <div class="card-category d-flex">
           <%= link_to events_path(:category => "Environment") do%>
             <img id="grow" class="icone-category" src="https://image.flaticon.com/icons/png/512/1598/1598196.png">
@@ -26,7 +24,7 @@
     </div>
     <div class="col-3">
       <div class="name-category">
-        <h2>Alimentation</h2>
+        <h3>Alimentation</h3>
         <div class="card-category">
           <%= link_to events_path(:category => "Alimentation") do%>
             <img id="vibrate" class="icone-category" src="https://image.flaticon.com/icons/png/512/3050/3050228.png">
@@ -36,7 +34,7 @@
     </div>
     <div class="col-3">
       <div class="name-category">
-        <h2>Cultural</h2>
+        <h3>Cultural</h3>
         <div class="card-category" >
           <%= link_to events_path(:category => "Cultural") do %>
             <img id="flip" class="icone-category" src="https://image.flaticon.com/icons/png/512/1344/1344461.png">
@@ -47,27 +45,30 @@
   </div>
 
  
-  <div class="row">
-    <div class="col-12">
-      <%= form_tag events_path, class:"d-flex justify-content-center", method: :get do %>
+  
+  <div class="search-box" style="margin-top: 30px">
+        <%= form_tag events_path, class:"d-flex justify-content-center", method: :get do %>
         <div class="search d-flex">
-        <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Find a Event" %>
-        <div class="search-btn"><%= submit_tag "Search", class: "btn btn-success" %></div>
+        <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "FIND AND EVENT" %>
+        <div class="search-btn"><%= submit_tag "Search", class: "all-button" %></div>
         </div>
       <% end %>
+  
+  </div>
+  
+    
+
+
+  <div class="d-flex">
+    <div class="display-grid w-50 mr-3 ml-5">
+          <% @events.each do |event| %>
+            <%= render "shared/cards", event: event %>
+          <% end %>
     </div>
 
- </div>
-
-
-  <div class="row">
-    <div class="col-8 d-flex flex-wrap">
-      <% @events.each do |event| %>
-        <%= render "shared/cards", event: event %>
-      <% end %>
-    </div>
-    <div class="col-4">
+    <div class="display-all d-flex justify-content-center w-50">
       <%= render "shared/map" %>
     </div>
   </div>
+  
 </div>
