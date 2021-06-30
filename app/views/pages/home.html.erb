@@ -14,33 +14,35 @@
 
 
 
-<div class="container">
-
-  <div class="name-category" style="margin-left: 200px">
-      <div class="card-category">
-        <%= link_to events_path(:category => "Environment") do%>
-          <img id="grow" class="icone-category" src="https://image.flaticon.com/icons/png/512/1598/1598196.png">
-        <% end %>
-      </div>
-        <div>
-      <h2>Environment</h2>
-      <p style="width: 400px"> The climate is changing more and more quickly and associations are mobilizing to advance locally</p>
-      </div>
-  </div>
-
-  <div class="name-category" style="margin-left: 200px">
-      <div class="card-category">
-        <%= link_to events_path(:category => "Alimentation") do%>
-          <img id="vibrate" class="icone-category" src="https://image.flaticon.com/icons/png/512/3050/3050228.png">
-        <% end %> 
-      </div>
+<div class="container d-flex">
+  <div>
+    <div class="name-category" style="margin-left: 0px">
+        <div class="card-category">
+          <%= link_to events_path(:category => "Environment") do%>
+            <img id="grow" class="icone-category" src="https://image.flaticon.com/icons/png/512/1598/1598196.png">
+          <% end %>
+        </div>
           <div>
-      <h2>Alimentation</h2>
-      <p style="width: 400px"> People are in need. Associations are mobilizing to collect as much food as possible and share with the most disadvantaged</p>
-      </div>
-  </div>
+        <h2>Environment</h2>
+        <p style="width: 400px"> The climate is changing more and more quickly and associations are mobilizing to advance locally</p>
+        </div>
+    </div>
 
-  <div class="name-category" style="margin-left: 200px">
+    <div class="name-category" style="margin-left: 0px">
+        <div class="card-category">
+          <%= link_to events_path(:category => "Alimentation") do%>
+            <img id="vibrate" class="icone-category" src="https://image.flaticon.com/icons/png/512/3050/3050228.png">
+          <% end %> 
+        </div>
+            <div>
+        <h2>Alimentation</h2>
+        <p style="width: 400px"> People are in need. Associations are mobilizing to collect as much food as possible and share with the most disadvantaged</p>
+        </div>
+    </div>
+  </div>
+ 
+<div>
+  <div class="name-category" style="margin-left: 0px">
       <div class="card-category">
         <%= link_to events_path(:category => "Solidarity") do%>
           <img id="rotate" class="icone-category" src="https://image.flaticon.com/icons/png/512/3047/3047883.png">
@@ -53,7 +55,7 @@
       </div>
   </div>
 
-  <div class="name-category" style="margin-left: 200px">
+  <div class="name-category" style="margin-left: 0px">
     
       <div class="card-category" >
         <%= link_to events_path(:category => "Cultural") do %>
@@ -64,9 +66,11 @@
       <h2>Cultural</h2>
       <p style="width: 400px"> Education and culture bear a great deal of responsibility for future success and every donation can help.</p>
       </div>
-     
   </div>   
 
+
+</div>
+  
 </div>
 
 
