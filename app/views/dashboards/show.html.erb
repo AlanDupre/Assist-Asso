@@ -11,7 +11,7 @@
     <h3 class="h3-dashboard"><%= @user.address %></h3>
     <h3 class="h3-dashboard"><%= @user.city %></h3>
     <div style="margin-top: 100px;x">
-        <%= link_to "CREATE +", new_event_path, class: "btn btn-ghost" %>
+        <%= link_to "CREATE +", new_event_path, class: "all-button" %>
     </div>
 </div>
 
@@ -25,23 +25,22 @@
   <div class="tab-content">
     <div class="tab-pane fade show active" id="p1">
       <% @events.each do |event| %>
-        <%= render "shared/cards", event: event %>
-      <% end  %>    
-      <div class="d-flex">
-        <div class="progression d-flex">
-          <img src="https://image.flaticon.com/icons/png/512/921/921591.png" style="width: 80px; margin-left:30px;"> <p style="margin-left: 20px; margin-top: 30px;">PROGRESSION</p>
-        </div>
-        <div class="progress" style="width: 700px; height: 30px; background-color: white; border-radius: 20px; border: 1px solid; border-color:#000000; margin-left: 100px; margin-top: 30px">
+        <div class="card-dashboard">
+         <%= cl_image_tag event.cover_img.key, class: "card-img-top" %>
+          <div class="card-dashboard-infos">
+          <h2><%= event.name %></h2> 
+            <p><%= event.description %></p>
+          <div class="progress" style="width: 300px; height: 20px; background-color: white; border-radius: 20px; margin-top: 10px">
           <div class="progress-bar bg-success" style="width: <%= @percent %>%;" role="progressbar" aria-valuenow="<%= @percent %>" aria-valuemin="0" aria-valuemax="100"> <%= @percent %> %</div> 
           </div>
+          </div>
         </div>
-      </div>
-    </div>
-    <div class="tab-pane fade" id="p2">
-      <div class="col-8">
-        <% @events.each do |event| %>
-          <%= render "shared/cards", event: event %>
-        <% end  %>
+        <% end  %>    
+      <div class="d-flex">
+        <div class="progression d-flex">
+        </div>
+      
+        </div>
       </div>
     </div>
   </div>

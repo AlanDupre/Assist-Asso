@@ -37,7 +37,7 @@
 
 
           <% if donation_quantity < need.quantity %>
-            <button id="button-give" type="button" class="btn btn-ghost" style="border-radius: 16px" data-toggle="modal" data-target="#exampleModal-<%=need.id%>">GIVE
+            <button id="button-give" type="button" class="all-button" style="border-radius: 16px" data-toggle="modal" data-target="#exampleModal-<%=need.id%>">GIVE
             </button>
           <% end %>
 </div>
@@ -63,7 +63,7 @@
                   <%= f.input :quantity %>
                 </div>
                 <div class="btn-modal">
-                  <%= f.button :submit, class:"btn-success"%>  
+                  <%= f.button :submit, class:"all-button"%>  
                 </div>
               <% end %> 
           </div>
