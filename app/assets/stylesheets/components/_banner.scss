@@ -1,33 +1,48 @@
 .banner {
   background-size: cover;
   background-position: center;
-  transform: scale(0.9);
-  height: 700px;
-  margin-top: -40px;
+  transform: scale(0.85);
+  height: 720px;
+  margin-top: -71px;
+  position: relative;
 }
 
-.banner-event {
-  background-size: cover;
-  background-position: center;
-  padding: 150px 0;
-  margin-left: -64px;
+.card-product {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  width: 405px;
+  position: absolute;
+  
 }
 
-.banner h1 {
+.card-product img {
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
+}
+
+.card-product h2 {
+  font-size: 16px;
+  font-weight: bold;
   margin: 0;
-  color: Black;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  font-size: 32px;
-  font-weight: bolder;
-  // padding-left: 330px;
+  left: 20px;
 }
 
-.banner p {
-  font-size: 20px;
-  color: black;
+.card-product p {
+  font-size: 12px;
+  line-height: 1.4;
   opacity: .7;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  justify-content: center;
-  // margin-left: 330px;
+  margin-bottom: 0;
+  margin-top: 8px;
 }
 
+.card-product .card-product-infos {
+  padding: 16px;
+}
+
+.banner .card-product{
+  margin-left: 330px;
+  top: 335px;
+}

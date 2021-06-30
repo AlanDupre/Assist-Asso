@@ -30,3 +30,62 @@
   margin: 20px;
   margin-left: 181px;
 }
+
+// CARD-NEED
+
+.card-need {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  width: 200px;
+  margin-top: 60px;
+  margin: 30px;
+  margin-left: 50px;
+}
+
+.card-need > img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-need p {
+  font-size: 12px;
+  font-weight: bold;
+  margin-left: 50px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.card-need h2{
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.card-need .card-need-infos {
+  padding: 16px;
+  align-items: center;
+  position: relative;
+}
+
+.card-need-infos .card-need-user {
+  position: absolute;
+  right: 16px;
+  top: -20px;
+  width: 40px;
+}
+
+#button-give {
+  margin: 15px;
+  margin-left: 50px;
+  margin-top: -10px;
+
+}
+
+.card-need-border {
+  border-top: 1px solid;
+  border-bottom: 1px solid;
+  margin: auto;
+  margin-top: 10px;
+}
+
