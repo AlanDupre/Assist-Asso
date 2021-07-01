@@ -9,12 +9,20 @@
 
 .card-product {
   overflow: hidden;
-  background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  background: #FF87A2;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
   display: flex;
   width: 405px;
   position: absolute;
-  
+  border-radius: 20px;
+}
+
+a {
+  color: white;
+}
+
+a:hover {
+  color: white;
 }
 
 .card-product img {
@@ -40,9 +48,11 @@
 
 .card-product .card-product-infos {
   padding: 16px;
+  // border-radius: 20px;
 }
 
 .banner .card-product{
-  margin-left: 330px;
+  margin-left: 346px;
   top: 335px;
 }
+

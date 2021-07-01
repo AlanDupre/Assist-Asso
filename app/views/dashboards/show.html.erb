@@ -18,7 +18,7 @@
 <div class="d-flex flex-column">
   <nav class="nav nav-tabs">
     <% if current_user.events.size > 0 %>
-      <a class="nav-item nav-link active" href="#p1" data-toggle="tab">MY EVENT</a>
+      <a class="nav-item nav-link active" href="#p1" data-toggle="tab">MY EVENTS</a>
     <% end %>
       <%# <a class="nav-item nav-link" href="#p2" data-toggle="tab">WISHLIST EVENTS</a> %>
   </nav>
@@ -30,19 +30,20 @@
           <div class="card-dashboard-infos">
             <h2><%= event.name %></h2> 
               <p><%= event.description %></p>
+
             <div class="progress" style="width: 300px; height: 20px; background-color: white; border-radius: 20px; margin-top: 10px">
               <div class="progress-bar bg-success" style="width: <%= @percent[index] %>%;" role="progressbar" aria-valuenow="<%= @percent[index] %>" aria-valuemin="0" aria-valuemax="100"> <%= @percent[index] %> %</div> 
             </div>
           </div>
-          <div class="discover" style="margin-top: 46px; margin-left: 141px;">
+          <div class="discover" style="margin-left: 200px; margin-top: 50px;">
             <%= link_to "Explore", event_path(event), class: "all-button" %>
           </div>
-          <div class="action" style="margin-bottom: 84px; margin-left: -8px;">
+          <div class="action" style="margin-bottom: 60px;">
+           <%= link_to event_path(event), method: :delete do  %>
+              <img style="width: 20px;" src="https://image.flaticon.com/icons/png/512/2087/2087868.png" >
+            <% end %>
             <%= link_to  edit_event_path(event)  do %>
             <img style="width: 20px;" src="https://image.flaticon.com/icons/png/512/1160/1160515.png">
-            <% end %>
-            <%= link_to event_path(event), method: :delete do  %>
-              <img style="width: 20px;" src="https://image.flaticon.com/icons/png/512/2087/2087868.png" >
             <% end %>
           </div>
         </div>
