@@ -3,16 +3,19 @@
 <div class="dashboard-container" style="margin-top: 40px; margin-left: 40px;">
 
 <div class="infos-dashboard">
-    <div id="avatar-dashboard">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtuWNoGqQAQmyVewoCljthAEpQKkLVcKguug&usqp=CAU" class="avatar-dashboard">
-    </div>
+  <div id="avatar-dashboard">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtuWNoGqQAQmyVewoCljthAEpQKkLVcKguug&usqp=CAU" class="avatar-dashboard">
+  </div>
     <div class="infos-user">
-    <h3 id="username-dashboard"><%= @user.first_name %> <%= @user.last_name %></h3>
-    <div class="socials-asso">
-      <i class="fab fa-instagram"></i>
-      <i class="fab fa-facebook"></i>
-      <i class="fab fa-twitter"></i>
+      <h3 id="username-dashboard"><%= @user.first_name %> <%= @user.last_name %></h3>
+        <div class="socials-asso">
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-facebook"></i>
+          <i class="fab fa-twitter"></i>
+        </div>
     </div>
+    <div>
+  <%= link_to "CREATE +", new_event_path, class: "dashboard-button" %>
     </div>
 </div>
 
@@ -54,6 +57,3 @@
   </div>
 </div>
 
-<div style="margin-top: 100px;x">
-        <%= link_to "CREATE +", new_event_path, class: "all-button" %>
-</div>
