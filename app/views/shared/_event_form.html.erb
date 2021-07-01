@@ -1,29 +1,27 @@
 <div class="container new_event">
-  <div class ="form-box">
+  
     <%= simple_form_for(@event) do |f| %>
-      <div class="event-infos row" style="margin-left: 100px">
-      <div class="col-sm">
-        <%= f.input :name%>
-        <%= f.input :description%> 
-        <%= f.input :address%>
-        <%= f.input :name_asso%>
-      </div>
-
-     <div class="col-sm">
-        <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"} %>
-        <%= f.input :end_date, as: :string, required: false, input_html: {class: "datepicker"} %> 
-      </div>
-
-      <div class="col-sm">
-        <%= f.input :category,  collection: Event::CATEGORIES %>
-        <%= f.input :cover_img, as: :file %>
-        <%= f.input :photo, as: :file %>
-      </div>
+      <div class ="form-box d-flex">
         
-      </div>
-    </div>
-    <div class="next-step">
-        <%= f.submit "NEXT STEP", class:"all-button"%>
+          <div class="col-4">
+            <%= f.input :name%>
+            <%= f.input :description%> 
+            <%= f.input :address%>
+            <%= f.input :name_asso%>
+          </div>
+
+          <div class="col-4">
+              <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+              <%= f.input :end_date, as: :string, required: false, input_html: {class: "datepicker"} %> 
+          </div>
+
+          <div class="col-4">
+            <%= f.input :category,  collection: Event::CATEGORIES %>
+            <%= f.input :cover_img, as: :file %>
+            <%= f.input :photo, as: :file %>
+           
+              <%= f.submit "NEXT STEP", class:"all-button mt-5"%>
+          </div>  
     </div>
     <% end %>
 </div>
