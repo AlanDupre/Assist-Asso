@@ -2,16 +2,17 @@
   <h1 id="h1-dashboard">DASHBOARD <img src="https://image.flaticon.com/icons/png/512/1548/1548723.png" style="width: 50px;"></h1> 
 <div class="dashboard-container" style="margin-top: 40px; margin-left: 40px;">
 
-
 <div class="infos-dashboard">
-  <img class="icone-contact" src="https://image.flaticon.com/icons/png/512/3745/3745477.png" style="width: 50px;">
-    <h3 class="h3-dashboard"><%= @user.first_name %></h3> 
-    <h3 class="h3-dashboard"><%= @user.last_name %></h3>
-    <h3 class="h3-dashboard"><%= @user.email %></h3>
-    <h3 class="h3-dashboard"><%= @user.address %></h3>
-    <h3 class="h3-dashboard"><%= @user.city %></h3>
-    <div style="margin-top: 100px;x">
-        <%= link_to "CREATE +", new_event_path, class: "all-button" %>
+    <div id="avatar-dashboard">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtuWNoGqQAQmyVewoCljthAEpQKkLVcKguug&usqp=CAU" class="avatar-dashboard">
+    </div>
+    <div class="infos-user">
+    <h3 id="username-dashboard"><%= @user.first_name %> <%= @user.last_name %></h3>
+    <div class="socials-asso">
+      <i class="fab fa-instagram"></i>
+      <i class="fab fa-facebook"></i>
+      <i class="fab fa-twitter"></i>
+    </div>
     </div>
 </div>
 
@@ -51,4 +52,8 @@
       </div>
     </div>
   </div>
+</div>
+
+<div style="margin-top: 100px;x">
+        <%= link_to "CREATE +", new_event_path, class: "all-button" %>
 </div>
