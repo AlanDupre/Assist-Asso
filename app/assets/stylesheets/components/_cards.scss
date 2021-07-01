@@ -1,12 +1,7 @@
 .card-activity {
-  border: 1px solid rgba(80, 137, 145, 0.4);
   border-radius: 20px;
   margin-bottom: 24px;
   height: 380px;
-}
-
-.card-activity-image {
-  object-fit: cover;
 }
 
 .card-activity a {
@@ -18,7 +13,7 @@
   padding: 0px;
 }
 
-.card-activity:hover {
+.card-infos:hover {
   border: 1px solid rgba(80, 137, 145, 1);
 }
 
@@ -50,8 +45,13 @@
 
 .card-img-top {
   height: 200px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
 .card-infos {
   padding: 20px;
+  border: 1px solid rgba(80, 137, 145, 0.4);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
