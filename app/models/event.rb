@@ -4,7 +4,7 @@ class Event < ApplicationRecord
 
   include PgSearch::Model
   pg_search_scope :search_by_name_by_city_by_category,
-  against: [:name, :city, :category],  
+  against: [:name, :city, :category],
   using: {tsearch: { prefix: true }}
 
   has_many :needs, dependent: :destroy
