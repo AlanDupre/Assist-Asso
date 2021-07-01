@@ -19,27 +19,28 @@
       </div>
 
       <div class="card-need-infos">
-        <div class="card-need-border">
+
+        <div class="card-need-border justify-content-center">
           <p> <%= need.name %></p>
         </div>
 
 
-        <div class="card-need-quantity d-flex">
+        <div class="card-need-quantity d-flex justify-content-center">
          
               <% donation_array = need.donations.map do |donation| %>
                 <% donation.quantity %>
               <% end %>
-          <h2 style="margin-left: 50px;"><%= donation_quantity = donation_array.reduce(0,:+) %></h2>
+          <h2><%= donation_quantity = donation_array.reduce(0,:+) %></h2>
              <h2>/<%= need.quantity %></h2> 
        
         </div>
-      </div>
-
-
-          <% if donation_quantity < need.quantity %>
-            <button id="button-give" type="button" class="all-button" style="border-radius: 16px" data-toggle="modal" data-target="#exampleModal-<%=need.id%>">GIVE
+            <% if donation_quantity < need.quantity %>
+            <button id="button-give" type="button" class="all-button" style="border-radius: 16px; margin-left: 51px; margin-top: 8px;" data-toggle="modal" data-target="#exampleModal-<%=need.id%>">GIVE
             </button>
+            <% else %>
+              <h2 style="color: #fdae8f; margin-left: 71px">Full</h2>
           <% end %>
+      </div>
 </div>
 
 
