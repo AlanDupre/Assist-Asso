@@ -2,18 +2,23 @@
 
 
 
-  <div class="infos" style="margin-left: 60px;">   
-      <div style="margin-top: 90px; margin-left: 80px;">
-       <%= @event.name %>
-       <%= @event.description %> 
-       <%= link_to "➕ Add a need", new_event_need_path(@event), class: "all-button" %>  
+  <div class="infos">   
+      <div style="margin-top: 90px; text-align-center; margin-left: 300px;">
+       <h1><%= @event.name %></h1>
+       <p><%= @event.description %> </p>
+      <img src="https://image.flaticon.com/icons/png/512/3313/3313929.png" style="width: 20px"><%= @event.address %>,<%= @event.CP %>,<%= @event.city %>
     </div>
 
+   
 <div class="">
     <div class="d-flex">
       <div class="col-md-8">
         <%= render 'shared/need' %>
+            <div style="margin-top:10px; margin-left: 400px; ">
+      <%= link_to "➕ Add a need", new_event_need_path(@event), class: "all-button" %>  
+    </div>
       </div>
+
 
       <div class="col-md-4">
         <div id="map" style=" height: 355px; position: sticky; top: 0; margin-top: 60px; margin-right: 60px;"
