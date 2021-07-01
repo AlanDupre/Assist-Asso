@@ -1,12 +1,21 @@
 .card-activity {
   border: 1px solid rgba(80, 137, 145, 0.4);
-  border-radius: 3px;
+  border-radius: 20px;
   margin-bottom: 24px;
   height: 380px;
 }
 
+.card-activity-image {
+  object-fit: cover;
+}
+
+.card-activity a {
+  text-decoration: none;
+}
+
 .card-body {
   min-height: 16rem;
+  padding: 0px;
 }
 
 .card-activity:hover {
@@ -41,4 +50,8 @@
 
 .card-img-top {
   height: 200px;
+}
+
+.card-infos {
+  padding: 20px;
 }
