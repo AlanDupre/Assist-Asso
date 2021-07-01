@@ -23,11 +23,11 @@ jp = User.create!(first_name: "JP", last_name: "Morgan", email: "jp.morgan@email
 
 puts "create events"
 
-clothing = Event.create!(name: "Recolte de Vétements", description: "Donnez vos vêtements pour aider les démunis!", address: "26 rue de béthune", CP: "59000", city: "Lille", category: "Solidarity", name_asso: "Clothing Family", user: alan, cover_pic: "https://www.lenouveleconomiste.fr/wp-content/uploads/2018/06/location-826x459.jpg") 
-solidarity = Event.create!(name: "Aider les plus démunis", description: "Maraude de prévue pour venir en aide au plus démunis", address: "45 Rue Léon Gambetta", CP: "59000", city: "Lille", category: "Alimentation", name_asso: "Solidarity", user: jp, cover_pic: "https://www.projectboldlife.com/images/2018/09/local-food-kitchen-internal-2-1024x682.jpg") 
-environment = Event.create!(name: "Nettoyer près de Chez vous !", description: "On ramasse les déchets près de chez vous ! ", address: "65 rue esquermoise", CP: "59000", city: "Lille", category: "Environment", name_asso: "Easy Cleaning", user: adrien, cover_pic: "https://ecoquartierpetermcgill.org/wp-content/uploads/2017/05/corvees-1000x400.jpg") 
-cultural = Event.create!(name: "L'éducation pour tous", description: "Des enfants déscolarisés ! Des professeurs pour les accompagner", address: "30 rue de Gand", CP: "59000", city: "Lille", category: "Cultural", name_asso: "Kids Education", user: maxence, cover_pic: "https://www.enfantsprecoces.info/wp-content/uploads/bb-plugin/cache/enfants-heureux-ecole-panorama.jpg") 
-student = Event.create!(name: "Aides aux Etudiants", description: "Les étudiants sont en difficultés ! Un petit geste pour leur venir en aide !", address: "65 avenue de Bretagne", CP: "59000", city: "Lille", category: "Alimentation", name_asso: "Student Helper", user:  jp, cover_pic: "http://www.provenceducation.com/wp-content/uploads/2017/07/residence-etudiante-etudiants1.jpg") 
+clothing = Event.create!(name: "Clothing donation", description: "Donate your clothes to help the people in need!", address: "26 rue de béthune", CP: "59000", city: "Lille", category: "Solidarity", name_asso: "Clothing Family", user: alan, cover_pic: "https://www.lenouveleconomiste.fr/wp-content/uploads/2018/06/location-826x459.jpg") 
+solidarity = Event.create!(name: "Helping those in need", description: "Marauding planned to help the most needy. Fight against hunger !", address: "45 Rue Léon Gambetta", CP: "59000", city: "Lille", category: "Alimentation", name_asso: "Solidarity", user: jp, cover_pic: "https://www.projectboldlife.com/images/2018/09/local-food-kitchen-internal-2-1024x682.jpg") 
+environment = Event.create!(name: "Clean up near you!", description: "We're picking up trash near you!", address: "65 rue esquermoise", CP: "59000", city: "Lille", category: "Environment", name_asso: "Easy Cleaning", user: adrien, cover_pic: "https://ecoquartierpetermcgill.org/wp-content/uploads/2017/05/corvees-1000x400.jpg") 
+cultural = Event.create!(name: "Education for everybody", description: "Children out of school! Teachers to accompany them", address: "30 rue de Gand", CP: "59000", city: "Lille", category: "Cultural", name_asso: "Kids Education", user: maxence, cover_pic: "https://www.enfantsprecoces.info/wp-content/uploads/bb-plugin/cache/enfants-heureux-ecole-panorama.jpg") 
+student = Event.create!(name: "Student Supports", description: "Students are in trouble! A small gesture to help them!", address: "65 avenue de Bretagne", CP: "59000", city: "Lille", category: "Alimentation", name_asso: "Student Helper", user:  jp, cover_pic: "http://www.provenceducation.com/wp-content/uploads/2017/07/residence-etudiante-etudiants1.jpg") 
 # women = Event.create!(name: "Aides aux femmes", description: "Venez en aides aux femmes maltraitées", address: "65 avenue de Bretagne", CP: "59000", city: "Lille", category: "Solidarity", name_asso: "Stop Violence", user: adrien, cover_pic: "https://www.univ-lille.fr/fileadmin/user_upload/illustrations/actualites/2018/Universit%C3%A9_citoyenne/Journee-droits-femmes-1170x585px.jpg") 
 
 puts "updating events pictures"
@@ -83,11 +83,5 @@ Need.create!(category: "People", name: "People", quantity: 20, event: student)
 Need.create!(category: "Money", name: "Money (€)", quantity: 200, event: cultural)
 Need.create!(category: "Food", name: "Pasta (Kg)", quantity: 50, event: cultural)
 Need.create!(category: "People", name: "People", quantity: 20, event: cultural)
-
-
-
-
-
-
 
 donation = Donation.create!(quantity: 5, user: maxence, need: food)
