@@ -1,0 +1,6 @@
+# config/meta.yml
+
+meta_product_name: "Assist'Asso"
+meta_title: "Crowdsourced associations Events - Assist'Asso"
+meta_description: "We centralize donations to organize associative events. You, too, can participate in the social and solidarity economy by helping associations thanks to crowdfunding and crowdsourcing !"
+meta_image: "home_banner.jpg" # should exist in `app/assets/images/`

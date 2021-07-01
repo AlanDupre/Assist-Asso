@@ -1,6 +1,8 @@
+<% content_for :meta_title, "#{@event.name} is on #{DEFAULT_META["meta_product_name"]}" %>
+<% content_for :meta_description, @event.description %>
+<% content_for :meta_image, cl_image_path(@event.photo.key) %>
+
 <%= render 'shared/event_banner' %>
-
-
 
   <div class="infos">   
       <div style="margin-top: 90px; text-align-center; margin-left: 300px;">
