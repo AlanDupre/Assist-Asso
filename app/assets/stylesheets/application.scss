@@ -11,12 +11,11 @@
 @import "flatpickr/dist/flatpickr";
 
 // Your CSS partials
-
 @import "pages/index";
 
 // Components
-
 @import "components/index";
+@import "components/map";
 
 a:hover {
   color: #95d5b2;

@@ -24,23 +24,29 @@
   </nav>
   <div class="tab-content">
     <div class="tab-pane fade show active" id="p1">
-      <% @events.each do |event| %>
+      <% @events.each_with_index do |event, index| %>
         <div class="card-dashboard">
          <%= cl_image_tag event.cover_img.key, class: "card-img-top" %>
           <div class="card-dashboard-infos">
-          <h2><%= event.name %></h2> 
-            <p><%= event.description %></p>
-          <div class="progress" style="width: 300px; height: 20px; background-color: white; border-radius: 20px; margin-top: 10px">
-          <div class="progress-bar bg-success" style="width: <%= @percent %>%;" role="progressbar" aria-valuenow="<%= @percent %>" aria-valuemin="0" aria-valuemax="100"> <%= @percent %> %</div> 
+            <h2><%= event.name %></h2> 
+              <p><%= event.description %></p>
+            <div class="progress" style="width: 300px; height: 20px; background-color: white; border-radius: 20px; margin-top: 10px">
+              <div class="progress-bar bg-success" style="width: <%= @percent[index] %>%;" role="progressbar" aria-valuenow="<%= @percent[index] %>" aria-valuemin="0" aria-valuemax="100"> <%= @percent[index] %> %</div> 
+            </div>
           </div>
+          <div class="discover" style="margin-top: 46px; margin-left: 141px;">
+            <%= link_to "Explore", event_path(event), class: "all-button" %>
+          </div>
+          <div class="action" style="margin-bottom: 84px; margin-left: -8px;">
+            <%= link_to  edit_event_path(event)  do %>
+            <img style="width: 20px;" src="https://image.flaticon.com/icons/png/512/1160/1160515.png">
+            <% end %>
+            <%= link_to event_path(event), method: :delete do  %>
+              <img style="width: 20px;" src="https://image.flaticon.com/icons/png/512/2087/2087868.png" >
+            <% end %>
           </div>
         </div>
         <% end  %>    
-      <div class="d-flex">
-        <div class="progression d-flex">
-        </div>
-      
-        </div>
       </div>
     </div>
   </div>
