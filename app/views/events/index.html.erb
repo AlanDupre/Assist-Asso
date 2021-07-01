@@ -46,14 +46,15 @@
 
  
   
-  <div class="search-box" style="margin-top: 30px">
-        <%= form_tag events_path, class:"d-flex justify-content-center", method: :get do %>
-        <div class="search d-flex">
+  <div class="search-box">
+    <%= form_tag events_path, method: :get do %>
+      <div class="search">
         <%= text_field_tag :query, params[:query], class: "form-control", placeholder: "Search an event !" %>
-        <div class="search-btn"><%= submit_tag "Search", class: "all-button" %></div>
-        </div>
-      <% end %>
-  
+          <div class="search-button">
+            <%= submit_tag "Search", class: "all-button" %>
+          </div>
+      </div>
+    <% end %>
   </div>
   
     
