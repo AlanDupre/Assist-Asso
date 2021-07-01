@@ -9,6 +9,18 @@
   font-weight: lighter;
 }
 
+.form-control {
+  height: 44px;
+}
+
+.search-box {
+  display: inline-block;
+}
+
+.search-button {
+  display: flex;
+
+}
 
 .name-category {
   display: flex;
@@ -20,6 +32,7 @@
   width: 507px;
   margin-top: -43px;
   margin-bottom: 33px;
+  display: flex;
 }
 
 #rotate:hover {
