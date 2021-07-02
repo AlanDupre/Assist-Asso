@@ -1,22 +1,28 @@
 <%= render 'shared/event_banner' %>  
 
-    <div class="container infos" style="margin-left: 330px; margin-top: -50px;">   
-       <p><%= @event.name %></p>
-       <p><%= @event.description %> </p>
-      <img src="https://image.flaticon.com/icons/png/512/3313/3313929.png" style="width: 20px"><%= @event.address %>,<%= @event.CP %>,<%= @event.city %>
-    </div>
+      <div class="container infos" style="margin-left: 330px; margin-top: -50px;">   
+        <h3><%= @event.name %></h3>
+        <p><%= @event.description %></p>
+        <img src="https://image.flaticon.com/icons/png/512/3313/3313929.png" style="width: 20px"><%= @event.address %>,<%= @event.CP %>,<%= @event.city %>
+      </div>
+
+      <div>
+
+        <% if @event.user == current_user %>
+          <div style="margin-top:10px;margin-left: 150px;">
+            <%= link_to "➕ Add a need", new_event_need_path(@event), class: "all-button" %>  
+          </div>
+        <% end %>
+      </div>
 
 
 
-<div class="" style= "margin-top: 20px;">
+
+<div class="" style= "margin-top: -13px;">
     <div class="d-flex">
       <div class="col-md-8">
         <%= render 'shared/need' %>
-        <% if @event.user == current_user %>
-            <div style="margin-top:10px; margin-left: 400px; ">
-              <%= link_to "➕ Add a need", new_event_need_path(@event), class: "all-button" %>  
-            </div>
-        <% end %>
+
       </div>
 
 
